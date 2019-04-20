@@ -1,0 +1,105 @@
+1) SELECT blank FROM blank-table WHERE name ='blank';
+2) SFW = Straightforward
+SELECT, FOR, WHERE
+3)
+  a)  SELECT name, gender, age
+    FROM dogs
+    WHERE breed Like '%labrador%';
+
+  b) SELECT id
+  FROM dogs
+  WHERE age < 1;
+
+  c) SELECT name, age
+  FROM dogs
+  WHERE gender = 'F' AND weight > 35;
+
+  d) SELECT *
+  FROM dogs
+  WHERE breed NOT LIKE '%shepherd%';
+
+  e) SELECT id, age, weight, breed
+  FROM dogs
+  WHERE weight > 60 OR breed = 'great dane';
+
+4)
+
+      a)  name	adoption_date
+Mushi	2016-03-22T00:00:00.000Z
+Seashell	null
+Azul	2016-04-17T00:00:00.000Z
+Victoire	2016-09-01T00:00:00.000Z
+Nala	null
+
+      b) name	age
+Mushi	1
+Seashell	7
+Azul	3
+Victoire	7
+Nala	1
+
+5)
+          a)  SELECT *
+            FROM cats;
+
+         b)SELECT name, gender
+         FROM cats
+         WHERE age = 7;
+
+        FROM cats;
+
+6)
+ >
+Greater than, used when comparing 2 values ex. 8 > 5
+
+<
+Less than, used when comparing 2 values ex. 2 < 10
+
+=
+Equal to, used when comparing 2 values ex. name = 'Adrienne'
+
+<=
+Less than or equal to, used when comparing 2 values ex. 9 <= 10
+
+>=
+Greater than or equal to, used when comparing 2 values ex. 10>=10
+
+!=
+Not equal to, used when comparing 2 values 5 != 6
+
+
+<>
+Greater than or less than, used when comparing 2 values ex. price <> 10.00
+
+LIKE
+Used to pattern match a string ex. category LIKE '&travel';
+
+BETWEEN
+Implemented like "a BETWEEN x AND y", this is equivalent to "a >= x AND a <= y" ex. SELECT age from people WHERE age BETWEEN 5 AND 6;
+
+IS DISTINCT FROM
+Used as "expression IS DISTINCT FROM expression", this should be used in place of <> when one of the inputs could be null. ex. Cat IS DISTINCT FROM null
+
+AND
+Requires both expressions to be true for the row to be returned. ex. SELECT breed from dogs WHERE age = 5 AND name = 'Sadie';
+
+OR
+Requires one of the expressions to be true for the row to be returned ex. SELECT breed from dogs WHERE age = 5 OR age = 7;
+
+NOT
+Requires the expression to be false for the row to be returned SELECT breed from dogs WHERE NOT age = 7;
+
+
+
+
+7)
+SELECT name FROM cats WHERE gender = ‘F’;
+Query Error: error: column "‘f’" does not exist
+
+name
+Mushi
+Seashell
+Victoire
+Nala
+
+Query Error: error: column "‘mushi’" does not exist
