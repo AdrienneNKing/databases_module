@@ -1,0 +1,80 @@
+1)
+  1. string
+  2. integer
+  3. integer/date
+  4. float
+  5. float
+
+2)  A database is used when it is necessary to store large amounts of data that can be quickly read and modified. A text file would be used
+when it is necessary for the data to be easily readable.
+
+3) One difference between SQL and other programming languages is that SQL is declarative rather than procedural language, meaning we leave it
+to the database to feed us the information rather than defining how it should do that.
+
+4) The pieces of a database fit together at a high level much like an excel table, where there are column titles that define a relationship
+with the subsequent data-filled cells underneath. We use these titles to access the data through SQL queries.
+
+5) A table is the database as an entire object, a row is a horizontal subset of the data, wherein each intersecting column's cells can be accessed. A column
+is a subset of the data, wherein each intersecting row's cells can be accessed. Value refers to the data within each individual cell, which is itself the
+exact intersection of a specific column and row.
+
+6) A string, integer, or float can be stored in a table.
+
+7)
+a)
+This SQL query tells the payments database to return the values of all cells with the column title "date" and the column title " amount" in a new table.
+
+That new table would be:
+
+date	amount
+2016-05-01T00:00:00.000Z	1500.0000
+2016-05-10T00:00:00.000Z	37.0000
+2016-05-15T00:00:00.000Z	124.9300
+2016-05-23T00:00:00.000Z	54.7200
+
+b)
+This SQL query tells the payments database to return the value of all cells with the column title "amount", where the value of that cell is greater than
+500, in a new table.
+
+That new table would be:
+
+amount
+1500.0000
+
+c)
+This SQL query tells the payments database to select all available columns with the payee designated as "Mega Foods", and return them
+in a new table.
+
+That new table would be:
+
+date	payee	amount	memo
+2016-05-15T00:00:00.000Z	Mega Foods	124.9300	Groceries
+
+8)
+
+a)
+SELECT email, signup
+FROM users
+WHERE name = 'DeAndre Data';
+
+returns
+email	signup
+datad@comcast.net	2008-01-20T00:00:00.000Z
+
+b)
+SELECT userid
+FROM users
+WHERE email = 'aleesia.algorithm@uw.edu';
+
+returns
+userid
+1
+
+c)
+SELECT *
+FROM users
+WHERE userid = 4;
+
+returns
+userid	name	email	signup
+4	Brandy Boolean	bboolean@nasa.gov	1999-10-15T00:00:00.000Z
